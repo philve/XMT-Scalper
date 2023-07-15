@@ -1,49 +1,45 @@
-# XMT-Scalper
-Traduction du robot XMT Scalper en CSharp à partir de son source en Mql4.
+#XMT-Scalper
+Translation of the XMT Scalper robot into CSharp from its source in Mql4.
 
-# Origine de XMT-Scalper
+# XMT-Scalper origin
 
-'XMT-Scalper' est un robot c'est à dire un programme informatique ou Expert Advisor (EA) fonctionnant sur la plateforme de trading MetaTrader 4
-Il est originellement issu d'une version préliminaire  d'un robot commercial nommé 'MillionDollarPips' mais il a été largement renforcée et amélioré.
-Aujourd'hui, tout le code a été réécrit à partir de zéro, et seulement une partie du cœur de la stratégie est identique à sa version de base. 
-Cet EA n'est pas un produit commercial, mais est disponible gratuitement.
+'XMT-Scalper' is a robot i.e. a computer program or Expert Advisor (EA) running on the MetaTrader 4 trading platform
+It originally originated from a preliminary version of a trading robot named 'MillionDollarPips' but it has been extensively enhanced and improved.
+Today, all the code has been rewritten from scratch, and only part of the strategy's core is identical to its base version.
+This EA is not a commercial product, but is available for free.
 
-# Objectifs
+# Objectives
 
-Le Projet initial  d'un robot de trading scalper XMT-Scalper v2.4.6.1 écrit en MQL4 provient de [Capella](http://www.worldwide-invest.org). 
-Il à été traduit en CSharp par [Abdallah Hacid](ab.hacid@gmail.com) avec l'aide de la librairie [NQuotes](http://www.nquotes.net/) de [Daniel](support2@nquotes.net ).
-A partir de là nous nous proposons de restructurer le code pour le rendre plus modulaire et ainsi plus lisible puis ensuite le faire évoluer plus 
-simplement.
+The Initial Project of a scalping trading robot XMT-Scalper v2.4.6.1 written in MQL4 comes from [Capella](http://www.worldwide-invest.org).
+It was translated into CSharp by [Abdallah Hacid](ab.hacid@gmail.com) with the help of the [NQuotes](http://www.nquotes.net/) library of [Daniel](support2@nquotes .net).
+From there we propose to restructure the code to make it more modular and thus more readable and then to make it evolve more
+merely.
 
-# Avantages
-Un avantage indéniable du système NQuotes est que l'on peut écrire les indicateurs et robots de trading en CSharp et les éxécuter directemet
-sur la plateforme MetaTrader 4, on peut également faire un débogage ou piloter le robot depuis une interface Windows Form ou WPF. 
+# Advantages
+An undeniable advantage of the NQuotes system is that you can write indicators and trading robots in CSharp and execute them directly
+on the MetaTrader 4 platform, you can also debug or control the robot from a Windows Form or WPF interface.
 
 # Installation
 
-Pour compiler le programme avec Visual Studio, il faut au préalable :
+To compile the program with Visual Studio, you must first:
 
-1) installer [metatrader 4](http://www.metatrader4.com/).
+1) install [metatrader 4](http://www.metatrader4.com/).
 
-2) installer [NQuotes](http://www.nquotes.net/installation)  
+2) install [NQuotes](http://www.nquotes.net/installation)
 
-3) Modifier les instructions post-buids des deux projets MqlApiWithStdLib et XMT-Scalper
+3) Modify post-buids instructions of both MqlApiWithStdLib and XMT-Scalper projects
   
-  remplacez dans 'xcopy "$(ProjectDir)$(OutDir)$(TargetFileName)" "C:\Users\{user}\AppData\Roaming\MetaQuotes\Terminal\{clé}\MQL4\Experts" /Y'
+   replace in 'xcopy "$(ProjectDir)$(OutDir)$(TargetFileName)" "C:\Users\{user}\AppData\Roaming\MetaQuotes\Terminal\{key}\MQL4\Experts" /Y'
 
-  a) votre propre clé unique d'installation de metatrader 4 qui peut être retrouvée dans le répertoire '%TERMINAL_DATA_PATH%' qui se trouve dans
-  C:\Users\{user}\AppData\Roaming\MetaQuotes\Terminal\. 
+   a) your own unique metatrader 4 installation key which can be found in the '%TERMINAL_DATA_PATH%' directory located in
+   C:\Users\{user}\AppData\Roaming\MetaQuotes\Terminal\.
   
-  b) votre nom d'utilisateur windows.
-# Débogage avec NQuotes
+   b) your windows username.
 
-  Pour déboguer le programme avec NQuotes suivez les [instructions](http://www.nquotes.net/expert-creation-tutorial) donnez par son auteur [Daniel](support2@nquotes.net ).
+# Debugging with NQuotes
 
-# Notes
+   To debug the program with NQuotes follow the [instructions](http://www.nquotes.net/expert-creation-tutorial) given by its author [Daniel](support2@nquotes.net ).
+
+#Notes
   
-  a) si metatrader est actif, il y a une erreur lors de la compilation (la copie des dll ne se fait pas) du fait que les dll sont bloquées en accès par metratrader.
-  il faut donc fermer metatrader avant de compiler.
-
-  
-# Auteur
-Je suis Abdallah Hacid, mon métier est [technicien informatique](http://www.dpaninfor.ovh) et j'habite dans l'Essonne en France.
+   a) if metatrader is active, there is an error during compilation (dll copying is not done) because the dlls are blocked in access by metratrader.
